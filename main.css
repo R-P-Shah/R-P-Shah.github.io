@@ -2,19 +2,52 @@ body{
 	color: white;
 	font-family: Georgia, serif;	
 	display: inline;
-	text-align: left;
+	text-align: center;
 	
 }
 
 html{
-	background-color: darkgray;
+	background-color: #464b51;
+	margin-left: 40px;
 }
 
 h1{
-	text-align: center;
+	text-align: left;
 	font-size: 400%;
 	
 }
+
+div "about"{
+
+	text-align: left;
+}
+
+hr {
+  border: none;
+  height: 13px;
+  width: 70%;
+  background-color: white;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+a{
+
+	color: orange;
+	font-size: 125%;
+}
+
+b{
+
+	color: orange;
+}
+
+p{
+	font-size: 110%;
+}
+
+
+
 
 
 

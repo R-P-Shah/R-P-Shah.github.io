@@ -1,91 +1,112 @@
-body{
+body {
     margin: 0;
     padding: 0;
-    background-color: #ffc300;
-}
-.banner{
-    margin: 0;
-    padding: 0;
-    width: 100%;
-}
-#header_img{
-    margin: 0;
-    padding: 0;
-    width: 100%;
-}
-
-#content_gif{
-    width: 30%;
-    float: left;
-    padding: 10%;
-    padding-left: 15%;
-    padding-right: 5%; 
-    padding-top: 10%;
-}
-
-#content_div{
-    width: 30%;
-    padding: 10%;
-    padding-left: 0;
-    float: left;
+    background-color: black;
     color: white;
-}
-@font-face {
-    font-family: 'AdamDrawn';
-    src: url('../fonts/adamfont-webfont.eot');
-    src: url('../fonts/adamfont-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/adamfont-webfont.woff') format('woff'),
-         url('../fonts/adamfont-webfont.ttf') format('truetype'),
-         url('../fonts/adamfont-webfont.svg#adamdrawnstandard') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-#topic_title{
-    font-family: 'AdamDrawn';
-    text-transform:uppercase; 
-    font-size:4em; 
-    line-height:1em;
+    font-family: 'Press Start 2P', "arial";
 }
 
-#topic_paragraph{
-    font-family: arial;
-    line-height: 2em;
-}
 
-footer{
-    position: absolute;
-    bottom: -100vh;
-    width: 100%;
-    height: 60px;
-}
+/* center nav */
 
-footer > ul > li{ 
-    padding-top: 3%;
-    padding-left: 10%;
-    padding-right: 10%;
-    padding-bottom: 3%;
+nav {
+    padding: 0;
+    margin: 0;
     text-align: center;
-    display: inline-block;
-    
-    list-style-type: none;
-    
+    height: 10vh;
+    position: relative;
+    top: 50%;
+    bottom: 50%;
+    padding-top: 2%;
 }
 
-footer > ul{
-    margin: 20%;
-    margin-top: 0;
-    margin-bottom: 0;
-    padding: 0;
-}
-
-footer > ul > li > a{
-    color: white;
-    font-size: 3em;
+#links li {
     text-decoration: none;
-    font-family: "AdamDrawn";
+    display: inline;
+    font-size: 3em;
 }
 
-footer > ul > li > a:hover{
-    color: black;
-    background-color: white;
+a {
+    margin: 0;
+    padding: 0;
+    color: white;
+    text-decoration: none;
+    padding: 5%;
 }
+
+a:hover {
+    color: yellow;
+}
+
+
+#sprite {
+    margin: 0;
+    padding: 0;
+    float: left;
+    width: 47vw;
+    height: 85vh;
+    position: absolute;
+}
+
+#sprite img {
+    position: relative;
+    left: 25%;
+    right: 50%;
+    top: 20%;
+}
+
+img {
+    width: 60%;
+}
+
+#table {
+    margin: 0;
+    padding: 0;
+    padding-top: 5%;
+    padding-right: 5%;
+    float: right;
+    width: 50vw;
+
+}
+
+
+.menu_item {
+    padding: 3%;
+    padding-right: 6%;
+    border-style: solid;
+    border-width: 10px;
+    border-color: white;
+    font-size: 2em;
+
+}
+
+.content {
+    margin-top: 3%;
+    padding: 3%;
+    border-style: solid;
+    border-width: 10px;
+    border-color: white;
+    height: 500px;
+    overflow-y: scroll;
+}
+
+
+p {
+    font-size: 1.2em;
+    line-height: 1.5;
+}
+
+strong {
+    color: yellow;
+}
+
+/* use for positioning 
+
+    border-style: solid;
+    border-width: 5px;
+    border-color: aqua;
+
+
+
+
+*/

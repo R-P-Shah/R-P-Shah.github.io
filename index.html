@@ -56,7 +56,20 @@
 
             </div>
 
-            <div class="content" id="stat" style="display: none;"></div>
+            <div class="content" id="stat" style="display: none;">
+
+                <p>HTML................</p>
+                <p>CSS.................</p>
+                <p>PHP.................</p>
+                <p>JAVASCRIPT..........</p>
+                <p>JAVA................</p>
+                <p>MySQL...............</p>
+                <p>Photoshop...........</p>
+                <p>Premiere Pro........</p>
+                <p>Illustrator.........</p>
+                <p>Minitab.............</p>
+
+            </div>
 
             <div class="content" id="abilities" style="display: none;">
                 <h2><strong>Abilities</strong></h2>
@@ -74,20 +87,16 @@
     <script>
         function menuHover(menu, id) {
             var panes = document.getElementsByClassName("content");
-
             //set all other contents to none
             for (var i = 0; i < panes.length; i++) {
                 panes[i].style.display = "none";
             }
-
             //now set the menu bar 
             var menus = document.getElementsByClassName("menu_item");
             for (var i = 0; i < menus.length; i++) {
                 menus[i].style.color = "white";
                 menus[i].innerHTML = menus[i].innerHTML.replace("&gt;", "&nbsp;");
-
             }
-
             //set the desired menu as active and show the content
             document.getElementById(id).style.display = "block";
             addCarrot(menu);

@@ -94,8 +94,7 @@
             //now set the menu bar 
             var menus = document.getElementsByClassName("menu_item");
             for (var i = 0; i < menus.length; i++) {
-                menus[i].style.color = "white";
-                menus[i].innerHTML = menus[i].innerHTML.replace("&gt;", "&nbsp;");
+                removeCarrot(menus[i]);
             }
             //set the desired menu as active and show the content
             document.getElementById(id).style.display = "block";
@@ -105,6 +104,11 @@
         function addCarrot(menu) {
             menu.innerHTML = menu.innerHTML.replace("&nbsp;", "&gt;")
             menu.style.color = "yellow";
+        }
+
+        function removeCarrot(menu) {
+            menu.innerHTML = menu.innerHTML.replace("&gt;", "&nbsp;");
+            menu.style.color = "white";
         }
 
     </script>

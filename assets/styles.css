@@ -112,6 +112,7 @@ h3{
   text-decoration-line: none;
   padding-bottom: 2vh;
   padding-top: 2vh;
+  font-size: 1vh;
 }
 
 h3 a{
@@ -125,7 +126,7 @@ p{
   color: #596175;
   padding-top: 2vh;
   padding-bottom: 4vh;
-  font-size: 1rem;
+  font-size: 1vh;
 }
 
 h4{

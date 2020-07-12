@@ -128,7 +128,7 @@ h3 a{
 p{
   font-family: Roboto, sans-serif;
   color: #596175;
-  padding-top: 2vh;
+  padding-top:  2vh;
   padding-bottom: 4vh;
   font-size: 3rem;
   font-weight: normal;
@@ -170,6 +170,8 @@ a{
 }
 /** MEDIA QUERIES**/
 
+
+
 @media screen and (max-device-width: 480px){
   body{
     -webkit-text-size-adjust: none;
@@ -177,7 +179,7 @@ a{
 }
 
 /** sideways phones **/
-@media screen and (min-device-width: 375px) and (orientation: landscape){
+@media screen and (min-device-width: 375px), (orientation: landscape){
   h1{
     line-height: normal;
   }
@@ -187,7 +189,7 @@ a{
 }
 
 /** Tablet to laptop**/
-@media screen and (min-device-width: 640px) and (orientation: landscape){
+@media screen and (min-device-width: 640px), (orientation: landscape){
   h1{
     font-size: 5.5rem;
   }
@@ -293,6 +295,7 @@ a{
   .container{
     height: 10vh;
     min-height: 50px;
+    max-height: 75px;
     background-color: #F2F2F2;
     position: fixed;
     top: 0;
@@ -302,8 +305,10 @@ a{
 
   .navbar{
     height: auto;
-    margin-left: 65vw;
-    margin-right:0;
+    position: absolute;
+    right: 0vw;
+    margin-left: 0vw;
+    width: auto;
   }
 
   .navbar a{

@@ -50,7 +50,7 @@ body{
 }
 
 #active{
-  text-decoration: line-through;
+  /*text-decoration: line-through; */
 }
 
 
@@ -75,6 +75,7 @@ body{
   margin-top: 5vh;
   /*box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.5); */
 }
+
 
 #one{
   background-color: #ECFF79;
@@ -106,6 +107,7 @@ h2{
   font-size: 5rem;
   color: #596175;
   font-weight: normal;
+
 }
 
 h3{
@@ -114,7 +116,7 @@ h3{
   font-style: normal;
   font-weight: lighter;
   text-decoration-line: none;
-  padding-bottom: 2vh;
+  padding-bottom: 0vh;
   padding-top: 2vh;
   font-size: 6vw;
 }
@@ -176,6 +178,10 @@ a{
   body{
     -webkit-text-size-adjust: none;
   }
+  h3{
+    padding: 1vh;
+    margin:0;
+  }
 }
 
 /** sideways phones **/
@@ -197,8 +203,8 @@ a{
     font-size: 3.5rem;
   }
   h3{
-    padding-bottom: 1vh;
-    padding-top: 1vh;
+    padding-bottom: 0vh;
+    padding-top: 0vh;
     margin-top:0;
     margin-bottom: 0;
   }
@@ -236,7 +242,7 @@ a{
     width: 85vw;
     margin-left: 5vw;
     margin-right: 5vw;
-    margin-bottom: 60vh;
+    margin-bottom: 30vh;
   }
 
 
@@ -323,7 +329,7 @@ a{
     color: #000000;
     height: 100%;
     position: relative;
-    top: 2.5vh;
+    top: 2vh;
     margin-left: 2vw;
 
     text-decoration: none;
@@ -339,12 +345,20 @@ a{
   }
 
   .navbar a{
-    font-size: 200;
+    font-size: 100;
     padding-bottom: 1vh;
-        margin-right: 1vw;
+    margin-right: 1vw;
   }
 }
 
 a:hover{
-  text-decoration: line-through;
+  /*text-decoration: line-through; */
+  text-decoration: underline;
+}
+
+@media screen and (min-device-width: 1025px){
+
+    #sticky_container{
+      margin-bottom: 60vh;
+    }
 }

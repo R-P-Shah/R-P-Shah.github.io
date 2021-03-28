@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+<head>
+<title>Law of Supply</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, user-scalable=no" />
+</head>
+
+<body style="font-family: sans-serif">
+
+  <h1>DISCOVERY</h1>
+
+  <div class="">
+    <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTgxlOsyxaMB3625r_9z9BujljxnYu9WjLGxXQAlptm60ER2CtJXPj4zNfv1NhigkQDhH33ffiUcK_Z/embed?start=false&loop=false&delayms=60000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+  </div>
+
+    <p>How much money would Tom make selling 200 bottles at $200? </p>
+    <input id="problem1" type="number" name="TomProfit" value="">
+    <button onclick="feedback1()">Check</button>
+    <p id="feedback1"></p>
+
+    <script type="text/javascript">
+      function feedback1(){
+        var answer = parseInt(document.getElementById("problem1").value);
+        console.log(answer);
+        var text = "";
+        if(answer !== 40000){
+          text="Hmm, that doesn't sound right. Profit is calculated by multiplying quantity by price. So 200 bottles times $200 per bottle equals $40000 profit."
+        }else{
+          text="That's correct! He would make $40,000 at that price and quantity level."
+        }
+        document.getElementById("feedback1").innerHTML = text;
+      }
+    </script>
+
+    <p>How much money could tom have made if he could produce 400 units? </p>
+    <input id="problem2" type="number" name="OtherProfit" value="">
+    <button onclick="feedback2()">Check</button>
+    <p id="feedback2"></p>
+
+    <script type="text/javascript">
+      function feedback2(){
+        var answer = parseInt(document.getElementById("problem2").value);
+        console.log(answer);
+        var text = "";
+        if(answer !== 80000){
+          text="Hmm, that doesn't sound right. Profit is calculated by multiplying quantity by price. So 400 bottles times $200 per bottle equals $80000 profit."
+        }else{
+          text="That's correct! He would make $80,000 at that price and quantity level."
+        }
+        document.getElementById("feedback2").innerHTML = text;
+      }
+    </script>
+
+    <p>How much money did Tom lose out on by only producing 200 units?</p>
+    <input id="problem3" type="number" name="OtherProfit" value="">
+    <button onclick="feedback3()">Check</button>
+    <p id="feedback3"></p>
+
+    <script type="text/javascript">
+      function feedback3(){
+        var answer = parseInt(document.getElementById("problem3").value);
+        console.log(answer);
+        var text = "";
+        if(answer !== 40000){
+          text="You should try subtracting the amount Tom made from the amount of profits his competitors made. $80,000 - $40,000 = $40,000"
+        }else{
+          text="That's correct! He missed out on $40,000 for not producing at the level of the rest of the market."
+        }
+        document.getElementById("feedback3").innerHTML = text;
+      }
+    </script>
+
+  <a href="intro.html" style="font-size: 20px; float left">Previous Module: Introduction</a>
+  <a href="Definition.html" style="font-size: 20px;float: right">Next Module: Defintion</a>
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+<title>Law of Supply</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, user-scalable=no" />
+</head>
+
+<body style="font-family: sans-serif">
+
+<h1>DEFINITION</h1>
+<div class="">
+  <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTK07LcYQ5UTbZI0dQi8S6DiIAIKDBBHr5lXA-r0ihktcqrGBfwzIdB8wcsyckvYNmWrlt-WYFiKrYf/embed?start=false&loop=false&delayms=60000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+</div>
+
+
+<label for="updown">The Law of Supply: As price increases, quantity supplied will:</label>
+<select id="updown" name="law">
+<option value="select">Select an option</option>
+<option value="increase">Increase</option>
+<option value="decrease">Decrease</option>
+</select>
+
+<button onclick="feedback1()">Check</button>
+<p id="feedback1"></p>
+
+    <script type="text/javascript">
+      function feedback1(){
+        var answer = document.getElementById("updown").value;
+        console.log(answer);
+        var text = "";
+        if (answer == "select") {
+          text="You need to pick an option."
+        }else if(answer !== "increase"){
+          text="Hmm, not quite. Take a look at the tables and the graphs. When price went up, the supply grew as well. More and more suppliers decided it was worth producing so they joined the market. And existing suppliers produced more to make more money. Thus, supply increases with price."
+        }else{
+          text="That's correct! The values for supply went up when the values for price did. More suppliers like Tom join the market when prices go up, and they produce more supply to make more money."
+        }
+        document.getElementById("feedback1").innerHTML = text;
+      }
+    </script>
+
+
+  <a href="Discovery.html" style="font-size: 20px; float left">Previous Module: Discovery</a>
+  <a href="Application.html" style="font-size: 20px;float: right">Next Module: Application</a>
+
+</body>
+</html>

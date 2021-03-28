@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+<title>Law of Supply</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, user-scalable=no" />
+</head>
+
+<body style="font-family: sans-serif">
+<h1>APPLICATION</h1>
+
+  <div class="">
+    <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vR7NJdrqPtR6H2_SMl2ZTTsJATK4zGsO0ki3WmbywL3UfSvxYeb2ZZqPIknMhpMP2KWnbmobyWbaiOj/embed?start=false&loop=false&delayms=60000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+  </div>
+
+  <label for="updown">If the price of Disco Dairy goes down, will the quantity supplied to up or down?:</label>
+  <select id="updown" name="law">
+  <option value="select">Select an option</option>
+  <option value="increase">Up</option>
+  <option value="decrease">Down</option>
+  </select>
+
+  <button onclick="feedback1()">Check</button>
+  <p id="feedback1"></p>
+
+      <script type="text/javascript">
+        function feedback1(){
+          var answer = document.getElementById("updown").value;
+          console.log(answer);
+          var text = "";
+          if (answer == "select") {
+            text="You need to pick an option."
+          }else if(answer !== "decrease"){
+            text="Hmm, not quite. The Law of Supply states that Supply and Price have a direct relationship. If price goes up, then quantity supplied will go up too."
+          }else{
+            text="That's correct! With the price decreasing, Tom will find it less worthwhile to create more Disco Dairy."
+          }
+          document.getElementById("feedback1").innerHTML = text;
+        }
+      </script>
+
+
+  <a href="Definition.html" style="font-size: 20px; float left">Previous Module: Definition</a>
+  <a href="Practice.html" style="font-size: 20px;float: right">Next Module: Practice</a>
+
+</body>
+</html>

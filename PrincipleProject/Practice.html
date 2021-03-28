@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+<head>
+<title>Law of Supply</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, user-scalable=no" />
+</head>
+
+<body style="font-family: sans-serif">
+
+  <h1>PRACTICE</h1>
+  <div class="">
+      <img src="TommyOut.png" alt="">
+  </div>
+
+
+  <label for="updown">While crawling through the vents of his competitor’s building (for no particular reason) Tom overhears that they plan on doubling their cosmetic dairy production. Scheming, does Tom think that the price has increased or decreased?</label>
+  <select id="updown" name="law">
+  <option value="select">Select an option</option>
+  <option value="increase">Increased</option>
+  <option value="decrease">Decreased</option>
+  </select>
+
+  <button onclick="feedback1()">Check</button>
+  <p id="feedback1"></p>
+
+      <script type="text/javascript">
+        function feedback1(){
+          var answer = document.getElementById("updown").value;
+          console.log(answer);
+          var text = "";
+          if (answer == "select") {
+            text="You need to pick an option."
+          }else if(answer !== "increase"){
+            text="Incorrect. If Tom's competitors are increasing supply, that means that price must have increased too because it is when price increases that supply increases to meet it."
+          }else{
+            text="That's correct! If Tom's competitors are increasing their supply, they are anticipating a higher price and are trying to make the most of it."
+          }
+          document.getElementById("feedback1").innerHTML = text;
+        }
+      </script>
+
+<hr>
+
+      <label for="updown2">Tom notices that the prices of Scented Phones are decreasing. He is about to talk to his manufacturers, should he make them produce more or less Scented Phones?</label>
+      <select id="updown2" name="law">
+      <option value="select">Select an option</option>
+      <option value="increase">More</option>
+      <option value="decrease">Less</option>
+      </select>
+
+      <button onclick="feedback2()">Check</button>
+      <p id="feedback2"></p>
+
+      <script type="text/javascript">
+        function feedback2(){
+          var answer = document.getElementById("updown2").value;
+          console.log(answer);
+          var text = "";
+          if (answer == "select") {
+            text="You need to pick an option."
+          }else if(answer !== "decrease"){
+            text="Incorrect. If the cost of scented phones is decreasing, Tom will decrease the number of phones he supplies because it is not as worth it to produce."
+          }else{
+            text="That's correct! If the cost of scented phones is decreasing, Tom won't produce as many and can put resources towards other markets that are doing better."
+          }
+          document.getElementById("feedback2").innerHTML = text;
+        }
+      </script>
+
+<hr>
+
+      <p>Below is the Supply Curve for another market: Saltine Crackers. Tom wants to break into the market and has been eyeing the prices of Saltines being sold. What is the minimum price at which it makes sense for Tom to even supply any amount of Saltines?</p>
+      <input id="problem3" type="number" name="TomProfit" value="">
+      <button onclick="feedback3()">Check</button>
+      <p id="feedback3"></p>
+      <img src="PracticeGraph.png" alt="">
+
+      <script type="text/javascript">
+        function feedback3(){
+          var answer = parseInt(document.getElementById("problem3").value);
+          console.log(answer);
+          var text = "";
+          if(answer !== 20){
+            text="Hmm, that doesn't sound right. The minimum price shown on the graph is $20. The curve starts where quantity supplied is 0. If Tom produced just 1 phone that quarter, he would need to sell it at a little over $20. If the price is less than that, then there is no incentive to produce any product. A price below $20 would put the supply curve into the negative, and a negative supply is not feasible. Thus, the minimum price is $20 for Tom to enter the market."
+          }else{
+            text="That's correct! That is the minimum price on the Supply curve. If the price were any lower, Tom would always be creating a surplus."
+          }
+          document.getElementById("feedback3").innerHTML = text;
+        }
+      </script>
+
+
+  <a href="Application.html" style="font-size: 20px; float left">Previous Module: Application</a>
+
+
+</body>
+</html>

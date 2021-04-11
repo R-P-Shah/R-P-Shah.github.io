@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>The Power Rule</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+
+
+
+
+    <h2>Practice For Yourself!</h2>
+    <h4>What is the power of this term?</h4>
+    <p>f(x) = 2x<sup>4</sup> </p>
+    <input id="problem1" type="text" name="test1" value="">
+    <button onclick="feedback1()">Check</button>
+    <p id="feedback1"></p>
+
+    <script type="text/javascript">
+      function feedback1(){
+        var txt = "";
+        var answer = parseInt(document.getElementById("problem1").value);
+        if(answer !== 4){
+          txt="Incorrect! Look at the small number above the 'x'. That is the exponent.";
+        }else{
+          txt="Correct! Now you know what to multiply to the existing coefficient!";
+        }
+
+        document.getElementById("feedback1").innerHTML = txt;
+
+      }
+    </script>
+
+    <h4>Using the Power Rule what is the derivative of the following monomial? Use the ^ character to describe exponents.</h4>
+    <p>f(x) = 2x<sup>4</sup></p>
+    <input id="problem2" type="text" name="test2" value="">
+    <button onclick="feedback2()">Check</button>
+    <p id="feedback2"></p>
+
+    <script type="text/javascript">
+      function feedback2(){
+        var txt = "";
+        var answer = document.getElementById("problem2").value;
+        if(answer !== "8x^3"){
+          txt="Incorrect! The exponent is 4. Multiplied by the existing coefficient is 4*2 = 8. The last step is to subtract 1 from the exponent, 4-3=1. Thus the derivative is 8x^3";
+        }else{
+          txt="Correct! The term was already in power form so nothing extra to worry about. You remembered to multiply the old exponent to the existing coefficient.";
+        }
+
+        document.getElementById("feedback2").innerHTML = txt;
+
+      }
+    </script>
+
+    <h4>Using the Power Rule what is the derivative of the following monomial? Use the ^ character to describe exponents. Keep your answer in Power form.</h4>
+    <p>f(x) = 3/x<sup>2</sup></p>
+    <input id="problem3" type="text" name="test3" value="">
+    <button onclick="feedback3()">Check</button>
+    <p id="feedback3"></p>
+
+    <script type="text/javascript">
+      function feedback3(){
+        var txt = "";
+        var answer = document.getElementById("problem3").value;
+        if(answer !== "-6/x^-3"){
+          txt="Incorrect! This one is a little tougher. Remember the first question is, is the term in power form? In this case, no! We need to convert this to a negative exponent. 1/x^2 is the same as x^-2. After this you can apply the same rules as before. Bring the -2 down, multiply by 3 to get -6. And lastly subtract 1 from the exponent to get -3. Thus, -6x^-3";
+        }else{
+          txt="Correct! This one is tricky because of the fractional variable but converting it to a negative exponent makes it easy.";
+        }
+
+        document.getElementById("feedback3").innerHTML = txt;
+
+      }
+    </script>
+
+    <h4>Using the Power Rule what is the derivative of the following monomial? Use the ^ character to describe exponents. Keep your answer in Power form.</h4>
+    <p>f(x) = 2 * sqrt(x)</p>
+    <input id="problem4" type="text" name="test4" value="">
+    <button onclick="feedback4()">Check</button>
+    <p id="feedback4"></p>
+
+    <script type="text/javascript">
+      function feedback4(){
+        var txt = "";
+        var answer = document.getElementById("problem4").value;
+        if(answer !== "x^-1/2"){
+          txt="Incorrect! Is this monomial in power form? No! We need to transform it. Remember that roots can turn into fractional exponents. In this scenario, it turns into 2 * x^1/2. Now we can apply the tried and true method. Bring the exponent down and multiply by the existing coefficient. 2 * 1/2 is 1. Now we subtract one from the exponent. 1/2 - 1 = -1/2. Thus our answer is x^-1/2";
+        }else{
+          txt="Correct! This one is tricky again with having to convert from a square root, but the rest of the process is the same.";
+        }
+
+        document.getElementById("feedback4").innerHTML = txt;
+
+      }
+    </script>
+
+
+  </body>
+</html>

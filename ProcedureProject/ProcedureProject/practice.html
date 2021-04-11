@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+
+      <h1>The Power Rule: Practice</h1>
+
+      <h2>Write the number of the order that corresponds to the step.</h2>
+      <h3>1 = first, 4 = last</h3>
+
+      <p style="display: inline">Subtract 1 from the exponent</p>
+      <input type="number" id="match1" name="match" value="" style="display:block">
+
+      <p style="display: inline">Simplify Coefficients </p>
+      <input type="number" id="match2" name="match" value="" style="display:block">
+
+      <p style="display: inline">Identify the exponent</p>
+      <input type="number" id="match3" name="match" value="" style="display:block">
+
+      <p style="display: inline">Bring down exponent as coefficient</p>
+      <input type="number" id="match4" name="match" value="" style="display:block">
+
+
+      <button onclick="match1()">Check</button>
+      <p id="match-feedback"></p>
+
+      <script type="text/javascript">
+        function match1(){
+
+          var txt = "";
+          var answer1 = document.getElementById("match1").value;
+          var answer2 = document.getElementById("match2").value;
+          var answer3 = document.getElementById("match3").value;
+          var answer4 = document.getElementById("match4").value;
+
+          var answer = answer1 + answer2 + answer3 + answer4;
+
+
+          if(answer !== "4312"){
+            txt="That's not the correct order. The very first step is identifying the exponent. Next, you bring down the exponent as a coefficient. Then you simplify your coefficients together. The last step is subtracting 1 from the exponent.";
+
+          }else{
+            txt="Correct, you have ordered the steps in the correct order.";
+
+          }
+
+          document.getElementById("match-feedback").innerHTML = txt;
+        }
+      </script>
+
+
+      <h2>Find the derivative of f(x) = 2x^4</h2>
+
+      <h3>What is the exponent?</h3>
+      <p style="display: inline">f'(x) = </p>
+      <input type="text" id="problem1" name="problem1" value="">
+      <button onclick="feedback1()">Check</button>
+      <p id="feedback1"></p>
+
+      <h3>What is the answer after the next step?</h3>
+      <p style="display: inline">f'(x) = </p>
+      <input type="text" id="problem2" name="problem1" value="">
+      <button onclick="feedback2()">Check</button>
+      <p id="feedback2" ></p>
+
+      <h3>What is the answer after the next step?</h3>
+      <p style="display: inline">f'(x) = </p>
+      <input type="text" id="problem3" name="problem1" value="">
+      <button onclick="feedback3()">Check</button>
+      <p id="feedback3"></p>
+
+
+      <h3>What is the final answer?</h3>
+      <p style="display: inline">f'(x) = </p>
+      <input type="text" id="problem4" name="problem4" value="">
+      <button onclick="feedback4()">Check</button>
+      <p id="feedback4" style="margin-bottom: 10vh"></p>
+
+
+      <script type="text/javascript">
+        function feedback1(){
+
+          var txt = "";
+          var answer = document.getElementById("problem1").value;
+          if(answer !== "4"){
+            txt="The exponent is the number above the term, also known as the power. In this case, it is 4.";
+
+          }else{
+            txt="Correct, you identified that the exponent is 4.";
+
+          }
+
+          document.getElementById("feedback1").innerHTML = txt;
+
+        }
+
+        function feedback2(){
+
+          var txt = "";
+          var answer = document.getElementById("problem2").value;
+          if(answer !== "4*2x^4"){
+            txt="The next step is to bring the exponent down and multiply it as a coefficient. The exponent is 4, so making that a coefficient gives us 4*2x^4";
+
+          }else{
+            txt="Correct, you turned the exponent into a coefficient and multiplied it as such.";
+
+          }
+
+          document.getElementById("feedback2").innerHTML = txt;
+
+      }
+
+      function feedback3(){
+
+        var txt = "";
+        var answer = document.getElementById("problem3").value;
+        if(answer !== "8x^4"){
+          txt="The next step is to simplify coefficients. 4 * 2 gives you 8 so the term comes out to be 8x^4";
+
+        }else{
+          txt="Correct, you simplified the coefficients of 4 and 2 to 8";
+
+        }
+
+        document.getElementById("feedback3").innerHTML = txt;
+
+    }
+
+    function feedback4(){
+
+      var txt = "";
+      var answer = document.getElementById("problem4").value;
+      if(answer !== "8x^3"){
+        txt="The last step is to subtract 1 from the exponent. The exponent was 4. 4 - 1 = 3. The final term becomes 8x^3";
+
+      }else{
+        txt="Correct, you subtracted 1 from the exponent to get 8x^3";
+
+      }
+      document.getElementById("feedback4").innerHTML = txt;
+
+  }
+
+
+      </script>
+
+        <div class="nav">
+          <a href="step4.html">Previous</a>
+        </div>
+
+  </body>
+</html>

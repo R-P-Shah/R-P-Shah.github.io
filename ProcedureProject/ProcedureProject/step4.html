@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+
+      <h1>The Power Rule: On Your Own</h1>
+      <img src="flowchart.png" alt="" style="height: 80vh">
+      <img src="power-rule.png" alt="" style="height: 80vh">
+
+      <h3>Answer this on your own:</h3>
+
+      <h2>Find the derivative of f(x) = 9x^10</h2>
+
+      <h3>What is the exponent?</h3>
+      <p style="display: inline">f'(x) = </p>
+      <input type="text" id="problem1" name="problem1" value="">
+      <button onclick="feedback1()">Check</button>
+      <p id="feedback1"></p>
+
+      <h3>What is the answer after the next step?</h3>
+      <p style="display: inline">f'(x) = </p>
+      <input type="text" id="problem2" name="problem1" value="">
+      <button onclick="feedback2()">Check</button>
+      <p id="feedback2" ></p>
+
+      <h3>What is the answer after the next step?</h3>
+      <p style="display: inline">f'(x) = </p>
+      <input type="text" id="problem3" name="problem1" value="">
+      <button onclick="feedback3()">Check</button>
+      <p id="feedback3"></p>
+
+
+      <h3>What is the final answer?</h3>
+      <p style="display: inline">f'(x) = </p>
+      <input type="text" id="problem4" name="problem4" value="">
+      <button onclick="feedback4()">Check</button>
+      <p id="feedback4" style="margin-bottom: 10vh"></p>
+
+
+      <script type="text/javascript">
+        function feedback1(){
+
+          var txt = "";
+          var answer = document.getElementById("problem1").value;
+          if(answer !== "10"){
+            txt="The exponent is the number above the term, also known as the power. In this case, it is 10.";
+
+          }else{
+            txt="Correct, you identified that the exponent is 10.";
+
+          }
+
+          document.getElementById("feedback1").innerHTML = txt;
+
+        }
+
+        function feedback2(){
+
+          var txt = "";
+          var answer = document.getElementById("problem2").value;
+          if(answer !== "10*9x^10"){
+            txt="The next step is to bring the exponent down and multiply it as a coefficient. The exponent is 10, so making that a coefficient gives us 10*9x^10";
+
+          }else{
+            txt="Correct, you turned the exponent into a coefficient and multiplied it as such.";
+
+          }
+
+          document.getElementById("feedback2").innerHTML = txt;
+
+      }
+
+      function feedback3(){
+
+        var txt = "";
+        var answer = document.getElementById("problem3").value;
+        if(answer !== "90x^10"){
+          txt="The next step is to simplify coefficients. 9 * 10 gives you 90 so the term comes out to be 90x^10";
+
+        }else{
+          txt="Correct, you simplified the coefficients of 9 and 10 to 90";
+
+        }
+
+        document.getElementById("feedback3").innerHTML = txt;
+
+    }
+
+    function feedback4(){
+
+      var txt = "";
+      var answer = document.getElementById("problem4").value;
+      if(answer !== "90x^9"){
+        txt="The last step is to subtract 1 from the exponent. The exponent was 10. 10 - 1 = 9. The final term becomes 90x^9";
+
+      }else{
+        txt="Correct, you subtracted 1 from the exponent to get 90x^9";
+
+      }
+      document.getElementById("feedback4").innerHTML = txt;
+
+  }
+
+
+      </script>
+
+        <div class="nav">
+          <a href="step3.html">Previous</a>
+          <a href="practice.html" style="">Next</a>
+        </div>
+
+  </body>
+</html>

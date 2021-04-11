@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+
+        <h1>The Power Rule: Final Exponent</h1>
+
+
+        <iframe width="1120" height="630" src="https://www.youtube.com/embed/FLAMAapstgM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="">
+
+</div>
+
+      <h3>Watch the video again if you need help remembering the steps.</h3>
+      <h3>All but 1 step has been completed for you. Write the final answer below:</h3>
+      <p>Answer before last step: 12x^4</p>
+      <p style="display: inline">f'(x) = </p>
+      <input type="text" id="problem1" name="problem1" value="">
+      <button onclick="feedback1()">Check</button>
+      <p id="feedback1" style="margin-bottom: 10vh"></p>
+
+      <script type="text/javascript">
+        function feedback1(){
+
+          var txt = "";
+          var answer = document.getElementById("problem1").value;
+          if(answer !== "12x^3"){
+            txt="Replay the video and identify what the last step is. The final step is to subtract 1 from the exponent. In this case the exponent is 4. 4 - 1 = 3. Thus the final exponent in the answer will be 3. The derivative then must be 12x^3";
+
+          }else{
+            txt="Correct, you identified that the last step is to subtract 1 from the exponent. 4 - 1 =3 , thus the answer is 12x^3";
+
+          }
+
+          document.getElementById("feedback1").innerHTML = txt;
+        }
+      </script>
+
+        <div class="nav">
+          <a href="Example.html">Previous</a>
+          <a href="Step2.html" style="">Next</a>
+        </div>
+
+  </body>
+</html>
